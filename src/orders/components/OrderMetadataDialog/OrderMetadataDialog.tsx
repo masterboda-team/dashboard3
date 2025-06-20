@@ -136,7 +136,7 @@ export const OrderMetadataDialog = ({
                   readonly
                   isLoading={loading && !data}
                   data={{
-                    metadata: data?.variant?.metadata ?? [],
+                    metadata: data?.metadata ?? [],
                     privateMetadata: data?.variant?.privateMetadata ?? [],
                   }}
                   hidePrivateMetadata={!hasManageProducts}

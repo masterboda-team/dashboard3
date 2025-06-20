@@ -1718,6 +1718,7 @@ export const order = (placeholder: string): OrderDetailsWithMetadataFragment => 
           },
         ],
       },
+      metadata: [],
     },
     {
       __typename: "OrderLine",
@@ -1829,6 +1830,7 @@ export const order = (placeholder: string): OrderDetailsWithMetadataFragment => 
           },
         ],
       },
+      metadata: [],
     },
   ],
   metadata: [
@@ -2106,6 +2108,7 @@ export const draftOrder = (placeholder: string): OrderDetailsWithMetadataFragmen
           },
         ],
       },
+      metadata: [],
     },
     {
       __typename: "OrderLine" as const,
@@ -2217,6 +2220,7 @@ export const draftOrder = (placeholder: string): OrderDetailsWithMetadataFragmen
           },
         ],
       },
+      metadata: [],
     },
   ],
   metadata: [],

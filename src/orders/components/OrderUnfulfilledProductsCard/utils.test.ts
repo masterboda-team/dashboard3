@@ -2,7 +2,7 @@ import { OrderLineFragment } from "@dashboard/graphql";
 
 import { toLineWithUnfulfilledQuantity } from "./utils";
 
-const line = {
+const line: OrderLineFragment = {
   __typename: "OrderLine",
   id: "id==",
   isShippingRequired: true,
@@ -75,6 +75,7 @@ const line = {
     },
   },
   thumbnail: null,
+  metadata: [],
 };
 
 describe("toLineWithUnfulfilledQuantity", () => {
