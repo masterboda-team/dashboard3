@@ -1997,9 +1997,13 @@ export const OrderLineFragmentDoc = gql`
   thumbnail {
     url
   }
+  metadata {
+    ...MetadataItem
+  }
 }
     ${StockFragmentDoc}
-${TaxedMoneyFragmentDoc}`;
+${TaxedMoneyFragmentDoc}
+${MetadataItemFragmentDoc}`;
 export const FulfillmentFragmentDoc = gql`
     fragment Fulfillment on Fulfillment {
   ...Metadata

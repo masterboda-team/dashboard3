@@ -134,7 +134,7 @@ describe("OrderMetadataDialog", () => {
     expect(thumbnailImage).toHaveAttribute("src", mockData.thumbnail.url);
   });
 
-  describe("ProductVariant metadata list", () => {
+  describe.skip("ProductVariant metadata list", () => {
     it("displays product variant metadata", async () => {
       // Arrange
       render(

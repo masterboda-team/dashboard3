@@ -148,6 +148,9 @@ export const fragmentOrderLine = gql`
     thumbnail {
       url
     }
+    metadata {
+      ...MetadataItem
+    }
   }
 `;
 
