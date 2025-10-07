@@ -4,6 +4,7 @@ import { removeAtIndex, updateAtIndex } from "@dashboard/utils/lists";
 import { Box, BoxProps } from "@saleor/macaw-ui-next";
 import React, { memo } from "react";
 
+import { FileprintMetadataCard } from "./FileprintMetadataCard";
 import { MetadataCard, MetadataCardProps } from "./MetadataCard";
 import { MetadataLoadingCard } from "./MetadataLoadingCard";
 import { EventDataAction, EventDataField } from "./types";
@@ -82,6 +83,8 @@ export const MetadataNoMemo = ({
     });
   };
 
+  const hasFileprintMetadata = data?.metadata?.some(metadata => metadata.key === "hash");
+
   return (
     <Box display="grid" gap={2} paddingBottom={10} {...props}>
       {isLoading ? (
@@ -105,6 +108,7 @@ export const MetadataNoMemo = ({
               onChange={event => change(event, true)}
             />
           )}
+          {hasFileprintMetadata && <FileprintMetadataCard data={data?.metadata} />}
         </>
       )}
     </Box>
